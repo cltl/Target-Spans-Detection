@@ -5,7 +5,7 @@ df = pd.read_csv ('WholeDataSetHateXplainTargetingSortedTargets_EqualTargets 1.c
 count = 0
 column_names = ["id", "dataset", "text", 'tokens', 'label']
 new_df = pd.DataFrame(columns = column_names)
-df2 = pd.read_excel('attention check sentences (HateXplain targeting.xlsx', header=[0])
+df2 = pd.read_excel('attention check sentences (HateXplain targeting).xlsx', header=[0])
 list_of_attention_sentences = df2['sentence'].to_list()
 for i in range(len(list_of_attention_sentences)):
     list_of_attention_sentences[i] = list_of_attention_sentences[i].lower()
