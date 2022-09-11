@@ -5,15 +5,15 @@ row = 1
 column = 0
 import xlsxwriter
 l = ['Text', 'ID', 'Token', 'UQS', 'Assigned Label']
-workbook1 = xlsxwriter.Workbook('/HateXplain_Target Span Detection_Low UQS.xlsx')
+workbook1 = xlsxwriter.Workbook('/annotation results/batches 1 - 120/HateXplain_Target Span Detection_Low UQS.xlsx')
 worksheet1 = workbook1.add_worksheet()
 for i in range(len(l)):
     worksheet1.write(0, i, l[i])
-workbook2 = xlsxwriter.Workbook('/HateXplain_Target Span Detection_Average UQS.xlsx')
+workbook2 = xlsxwriter.Workbook('/annotation results/batches 1 - 120/HateXplain_Target Span Detection_Average UQS.xlsx')
 worksheet2 = workbook2.add_worksheet()
 for i in range(len(l)):
     worksheet2.write(0, i, l[i])
-workbook3 = xlsxwriter.Workbook('/HateXplain_Target Span Detection_High UQS.xlsx')
+workbook3 = xlsxwriter.Workbook('/annotation results/batches 1 - 120/HateXplain_Target Span Detection_High UQS.xlsx')
 worksheet3 = workbook3.add_worksheet()
 for i in range(len(l)):
     worksheet3.write(0, i, l[i])
