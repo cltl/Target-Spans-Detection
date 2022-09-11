@@ -1,0 +1,147 @@
+<div
+  <div
+    <div style="height: 100% ; width: 100%; display: table">
+            <div ng-if="RC.showMessage == 'none'" style="display: table-cell ; height: 100% ; vertical-align: middle ;">
+                <div ng-if="RC.state == 'instructionsSlide'" class="panel panel-primary" style="width:90%; margin:auto">
+                    <div class="panel-heading" style="font-weight: bolder ;">Instructions</div>
+                    <div class="panel-body">
+                        @_SHOW_INSTRUCTIONS_@
+                        <button ng-click="RC.next()" type="button" class="btn btn-default" style="float:right ; margin-top:20px">Next</button>
+                    </div>
+                </div>
+
+                <div ng-if="RC.state == 'workerIdSlide'" class="panel panel-primary" style="width:90%; margin:auto">
+                    <div class="panel-heading" style="font-weight: bolder ;">Please enter your workerId into the box below:</div>
+                    <div class="panel-body">
+                        <input id="workerId" ng-model="RC.workerId" name="workerId" type="text" class="form-control" placeholder="enter here">
+                        <button ng-click="RC.next()" type="button" ng-disabled="RC.workerId == ''" class="btn btn-default" style="float:right ; margin-top:20px">Next</button>
+                    </div>
+                </div>
+
+                <div ng-if="RC.state == 'statisticsSlide'">
+                    <statistics-slide statistics="RC.statistics" click="RC.next"></statistics-slide>
+                </div>
+
+                <div ng-if="RC.state == 'questionSlide' && RC.questionIndex == $index" ng-repeat="question in RC.questions" style="width:90%; margin:auto">
+
+
+                    <!-- <this part can also be replaced by a template or your own ideas> -->
+                    <div class="panel panel-primary">
+                      <div class="alert">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <strong>Attention!</strong> This study contains highly abusive language. Please do not proceed if you feel uncomfortable facing such content.
+                      </div>
+                      <div class="panel-heading" style="font-weight: bolder ;">INSTRUCTIONS HERE</div>
+                      <div class="panel-body">
+                        <!--
+                        Question's content goes here
+                      --><div class="panel-group">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#collapse1">Instructions</a>
+                              </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                <p> A total of 30 sentences will be provided to you indexed from 0 to 29. Please read each piece of text carefully. All sentences target either an individual or a group of people in a negative way, i.e., a negative judgement or opinion has been expressed about one or more people, or one or more people have been addressed negatively. You have to determine who the target is and what words refer to that target. In this case, only human beings are meant to be taken as targets. Therefore, any other living being is excluded in this sense. Please check all words and subwords referring to the target no matter how many times they have appeared in the sentence.
+Annotators should not leave the questions completely unanswered. </p>
+<strong>Examples</strong>
+<p>1- You Bangladeshi guys are f***ing gangsta.  </p>
+<p>Target words: You, Bangladeshi, guys </p>
+<p>2- Just because we don't let groups of creepy Moroccan rapists into the club doesn't make us racist.</p>
+<p>Target words: creepy, Moroccan, rapists </p>
+<p>3- They do no shit other than going to the mosque. </p>
+<p>Target words: They </p>
+<p>4- Fuck the ignorant assholes from America, UK, and all other countries who try and soil the wonderful ties between all democratic nations.</p>
+<p>Target words: the, ignorant, assholes, from, America, UK, all, other, countries</p>
+<p>5- SHUT UP WHITE BOY.</p>
+<p>Target words: WHITE, BOY</p>
+<p>6- What's up nigger?</p>
+<p>Target words: nigger</p>
+<p>7- You spics are worthless.</p>
+<p>Target words: You, spics</p>
+<p>8- He is a stupid Muslim.</p>
+<p>Target words: He, a, stupid, Muslim</p>
+<p>9- He is stupid. The stupid should be fired.</p>
+<p>Target words: He, The, stupid</p>
+<p>10- That diaper-head over there is laughing.</p>
+<p>Target words: That, diaper-head</p>
+<p>11- I need a new gay hashtag.</p>
+<p>Target words: gay</p>
+<p>11- Have you seen the nigger faggot version of the movie?</p>
+<p>Target words: nigger, faggot</p>
+<p>11- John is stupid.</p>
+<p>Target words: John</p>
+  <p>**********************************************************</p>
+  <p>If you have any questions or feedback regarding the sentences and the whole task, please contact <b>Baran Barbarestani</b> via <b>b.barbarestani@vu.nl</b>.</p>
+                              </div>
+                            </div>
+                          </div>
+                         </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-primary">
+                      <div class="panel-heading" style="font-weight: bolder ;">QUESTION</div>
+
+                               <span style="display : block ; margin-top : 15px">{{"Question Index: " + $index + " out of 29"}}</span>
+                               <span style="display : block ; margin-top : 15px">{{"Text: "}}</span>
+                               <span style="display : block ; margin-top : 15px">{{question.text}}</span>
+                               <span style="display : block ; margin-top : 15px">{{"Target words:"}}</span>
+                               <checkbox-answer
+                                 options = question.tokens
+                                 answer = "question.answer"
+                                 add-none="true"
+                               >
+                               </checkbox-answer>
+
+                            <!--
+                            End of question
+                            -->
+                            <button ng-disabled="question.answer === undefined || question.answer == '' || question.answer == {}" ng-click="RC.nextQuestion()" type="button" class="btn btn-default" style="float:right ; margin-top:20px">Next</button>
+                     </div>
+               </div>
+            </div>
+                    <!-- </this part can also be replaced by a template or your own ideas> -->
+    </div>
+  </div>
+  <div ng-if="RC.showMessage == 'nextSubList'" style="height : 100% ; width : 100% ; display : table ; position: absolute ; top: 0 ; left: 0">
+      <div style="display: table-cell ; height: 100% ; vertical-align: middle ;">
+          <div style="width:90% ; margin:auto">
+              <!-- <this message is shown if a user successfully finished a sublist> -->
+              <div class="panel panel-primary">
+                  <!-- <the message's heading> -->
+                  <div class="panel-heading" style="font-weight: bolder ;" id="nextSubList_title">Attention:</div>
+                  <!-- </the message's heading> -->
+                  <div class="panel-body">
+                      <!-- <the message content> -->
+                      <div id="nextSubList_message">
+                          You've successfully completed a sublist. You may either stop here or continue with another one.
+                      </div>
+                      <!-- </the message content. please don't edit the buttons below (except their label)> -->
+                      <hr/>
+                      <button ng-click="RC.processFinish()" style="float:right ; margin-left: 10px ;" class="btn btn-default" type="button">Stop here</button>
+                      <button ng-click="RC.nextSublist()" style="float:right" class="btn btn-default" type="button">Continue</button>
+                  </div>
+              </div>
+              <!-- </this message is shown if a user successfully finished a sublist> -->
+          </div>
+      </div>
+  </div>
+  <div ng-if="RC.showMessage == 'goodBye'" style="height : 100% ; width : 100% ; display : table ; position: absolute ; top: 0 ; left: 0">
+      <div style="display: table-cell ; height: 100% ; vertical-align: middle ;">
+          <div style="width:90% ; margin:auto">
+              <div class="panel panel-primary">
+                  <div id="goodBye_title" class="panel-heading" style="font-weight: bolder ;">Attention:</div>
+                  <div class="panel-body">
+                      <div id="goodBye_message">
+                          You've successfully completed the experiment. Thank you for your participation. To hand in your submission, click on the "Submit"-button below.
+                      </div>
+                      <hr/>
+                      <button ng-click="RC.finished()" style="float:right" class="btn btn-default" type="button">Submit</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

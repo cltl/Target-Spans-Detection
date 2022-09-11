@@ -1,0 +1,1 @@
+[{"type":"String","simpleTypeName":"String","name":"ID"},{"type":"String","simpleTypeName":"String","name":"dataset"},{"type":"String","simpleTypeName":"String","name":"text"},{"type":"String","simpleTypeName":"String","name":"tokens"},{"type":"String","simpleTypeName":"String","name":"label"},{"type":"String","simpleTypeName":"String","name":"redirectUrl"}]
