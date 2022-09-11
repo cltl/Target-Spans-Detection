@@ -7,4 +7,10 @@ Colab notebooks contain the codes for fine-tuning RoBERTa-base langauge models w
 Fine-tuned models on Hugging Face:<br>
 -UQS threshold = 50: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_50_2_Previous_Hyperparameters<br>
 -UQS threshold = 60: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_60_2<br>
--UQS threshold = 70: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_70_2<br>
+-UQS threshold = 70: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_70_2<br><br>
+Files needed for designing the task on LingoTURK (Please visit https://github.com/FlorianPusse/Lingoturk for more information.):<br>
+1- /app/views/ExperimentRendering/TargetSpanDetectionbExperiment/TargetSpanDetectionExperiment_render.html<br>
+2- /public/javascripts/ExperimentRendering/TargetSpanDetectionbExperiment/TargetSpanDetectionExperiment_render.js<br>
+3- /app/models/Questions/ExperimentRendering/TargetSpanDetectionbExperiment/experiment.properties<br>
+4- /app/models/Questions/ExperimentRendering/TargetSpanDetectionbExperiment/fields.json<br>
+5- /app/models/Questions/ExperimentRendering/TargetSpanDetectionbExperiment/resultQuery.sql<br>
