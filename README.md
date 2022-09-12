@@ -8,4 +8,18 @@ Fine-tuned models on Hugging Face:<br>
 -UQS threshold = 50: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_50_2_Previous_Hyperparameters<br>
 -UQS threshold = 60: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_60_2<br>
 -UQS threshold = 70: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_70_2<br><br>
-Files needed for designing the annotation task on LingoTURK are available in the "annotation platform" folder. For more information on LingoTURK, Please visit https://github.com/FlorianPusse/Lingoturk<br>
+
+Folder Descriptions:<br>
+1- HateXplain data modified + creation of batches: It contains codes on how the HateXplained data set was organized based on sorted target groups and then the target groups were evenly distributed across the data set. The way samples were selected and preprocessed has been explained in the paper.<br>
+2- annotation batches: The raw batches created based on the proposed selection of the HateXplain data set.<br>
+3- annotation platform: It contains all the files that have been created or modified for designing the annotation task uisng LingoTURK. For more information on LingoTURK and how it works, please visit "https://github.com/FlorianPusse/Lingoturk".<br>
+4- annotation results: It contains the annotated 120 batches and all the information collected from the crowd. The "batches 1- 120" folder includes some general post-analysis on the whole collected data, especially based on the UQS scores achieved.<br>
+4- annotations analysis + reports: It contains codes on how some of the analyses were carried out on the achieved annotations from the crowd and experts and reports on the results.<br>
+classification: It contains codes on how the data were prepared to be fed into the langauge models for the classification task.<br><br>
+<p>Remarks:</p><br>
+1- Most but not all of the available codes are examples codes, which means that they have been written for a certain input file, UQS threshold, number of batches, etc. If you want to, for example, run them with a different score, data set, etc, you should modify them and give your own input file and parameters.
+2- The annotation platfrom used for recruiting the crowd was prolific (https://www.prolific.co)<br><br>
+<p>Requirements:</p><br>
+1- LingoTURK for designing the task (more information on https://github.com/FlorianPusse/Lingoturk)
+2- CrowdTruth for calculating the inter-annotator agreement scores and analyzing the annotations (https://github.com/CrowdTruth/CrowdTruth.git)
+3- 
