@@ -23,7 +23,7 @@ Fine-tuned models on Hugging Face:<br>
 ## Remarks:<br>
 1- Most but not all of the available codes are examples codes, which means that they have been written for a certain input file, UQS threshold, number of batches, etc. If you want to, for example, run them with a different score, data set, etc, you should modify them and give your own input file and parameters.<br>
 2- The training and test sets used for fine-tuning the langauge models can be found in the "annotations 1 - 120" folder. Any other file used in any of the codes can be easily found in one of the described folders. You should just run them with their correct directory. The names of the files and folders have been also selected in a way that you understand what each of them contains.<br>
-3- The original data set used for this project was HateXplain. For more information, please vist "https://github.com/hate-alert/HateXplain.git". 
+3- The original data set used for this project was HateXplain. For more information, please vist "https://github.com/hate-alert/HateXplain.git".<br>
 4- The annotation platfrom used for recruiting the crowd was prolific (https://www.prolific.co).<br><br>
 ## Requirements:<br>
 1- LingoTURK for designing the task (more information on https://github.com/FlorianPusse/Lingoturk)<br>
