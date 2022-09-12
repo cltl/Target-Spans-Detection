@@ -18,7 +18,7 @@ Fine-tuned models on Hugging Face:<br>
 3- annotation platform: It contains all the files that have been created or modified for designing the annotation task uisng LingoTURK. For more information on LingoTURK and how it works, please visit "https://github.com/FlorianPusse/Lingoturk".<br>
 4- annotation results: It contains the annotated 120 batches and all the information collected from the crowd. The "batches 1- 120" folder includes some general post-analysis on the whole collected data, especially based on the UQS scores achieved.<br>
 4- annotations analysis + reports: It contains codes on how some of the analyses were carried out on the achieved annotations from the crowd and experts and reports on the results.<br>
-classification: It contains codes on how the data were prepared to be fed into the langauge models for the classification task.<br><br>
+5- classification: It contains codes on how the data were prepared to be fed into the langauge models for the classification task.<br><br>
 ## Remarks:<br>
 1- Most but not all of the available codes are examples codes, which means that they have been written for a certain input file, UQS threshold, number of batches, etc. If you want to, for example, run them with a different score, data set, etc, you should modify them and give your own input file and parameters.<br>
 2- The training and test sets used for fine-tuning the langauge models can be found in the "annotations 1 - 120" folder. Any other file used in any of the codes can be easily found in one of the described folders. You should just run them with their correct directory. The names of the files and folders have been also selected in a way that you understand what each of them contains.<br
