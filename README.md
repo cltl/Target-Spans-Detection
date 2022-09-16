@@ -31,7 +31,7 @@ Fine-tuned models on Hugging Face:<br>
 ## Citation<br>
 If you intend to make use of our work or results, please cite our paper as explained below:<br>
 .........<br>
-If you want to cite the Github repository, please use one of the links below:<br> 
+If you want to cite the Github repository, please use the link below:<br> 
 https://github.com/cltl/Target-Spans-Detection.git<br>
 ## Contact<br>
 Please feel free to ask any questions you may have by contacting me via b[dot]barbarestani[at]vu[dot]nl.
