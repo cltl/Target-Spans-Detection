@@ -4,14 +4,14 @@ This project aimed at building an interpretable framework to integrate toxic lan
 example_link<br><br>
 ## Colab files:<br>
 Colab notebooks contain the codes for fine-tuning RoBERTa-base langauge models with different threholds on the training set and obtaining the predictions on the test set that have been created with a fixed UQS threshold (50)<br>
--UQS threshold = 50: https://colab.research.google.com/drive/143tvkcNAPd7bbr4vVAIznHc1lBHy6G-q?usp=sharing<br>
--UQS threshold = 60: https://colab.research.google.com/drive/1J4av7UrmIIUUA5-WG4jEYH6UMy4xPJS0?usp=sharing<br>
--UQS threshold = 70: https://colab.research.google.com/drive/1b7hVVTxA67cGiTKaae9VrrUrq5vR4NEG?usp=sharing<br><br>
+* UQS threshold = 50: https://colab.research.google.com/drive/143tvkcNAPd7bbr4vVAIznHc1lBHy6G-q?usp=sharing<br>
+* UQS threshold = 60: https://colab.research.google.com/drive/1J4av7UrmIIUUA5-WG4jEYH6UMy4xPJS0?usp=sharing<br>
+* UQS threshold = 70: https://colab.research.google.com/drive/1b7hVVTxA67cGiTKaae9VrrUrq5vR4NEG?usp=sharing<br><br>
 ## Hugging Face language models:<br>
 Fine-tuned models on Hugging Face:<br>
--UQS threshold = 50: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_50_2_Previous_Hyperparameters<br>
--UQS threshold = 60: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_60_2<br>
--UQS threshold = 70: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_70_2<br><br>
+* UQS threshold = 50: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_50_2_Previous_Hyperparameters<br>
+* UQS threshold = 60: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_60_2<br>
+* UQS threshold = 70: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_70_2<br><br>
 
 ## Description of folders:<br>
 1- HateXplain data modified + creation of batches: It contains codes on how the HateXplained data set was organized based on sorted target groups and then the target groups were evenly distributed across the data set. The way samples were selected and preprocessed has been explained in the paper.<br>
