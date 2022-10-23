@@ -30,7 +30,7 @@ Fine-tuned models on Hugging Face:<br>
 2- CrowdTruth for calculating the inter-annotator agreement scores and analyzing the annotations (https://github.com/CrowdTruth/CrowdTruth.git)<br>
 ## Citation<br>
 If you intend to make use of our work or results, please cite our paper as explained below:<br>
-.........<br>
+Barbarestani, B., Maks, I., & Vossen, P. (2022, October). Annotating Targets of Toxic Language at the Span Level. In Proceedings of the Third Workshop on Threat, Aggression and Cyberbullying (TRAC 2022) (pp. 43-51).<br> 
 If you want to cite the Github repository, please use the link below:<br> 
 https://github.com/cltl/Target-Spans-Detection.git<br>
 ## Contact<br>
