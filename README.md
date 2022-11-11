@@ -9,9 +9,9 @@ Colab notebooks contain the codes for fine-tuning RoBERTa-base langauge models w
 * UQS threshold = 70: https://colab.research.google.com/drive/1b7hVVTxA67cGiTKaae9VrrUrq5vR4NEG?usp=sharing<br><br>
 ## Hugging Face language models:<br>
 Fine-tuned models on Hugging Face:<br>
-* UQS threshold = 50: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_50_2_Previous_Hyperparameters<br>
-* UQS threshold = 60: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_60_2<br>
-* UQS threshold = 70: BBarbarestani/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_70_2<br><br>
+* UQS threshold = 50: CLLT/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_50_2_Previous_Hyperparameters<br>
+* UQS threshold = 60: CLTL/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_60_2<br>
+* UQS threshold = 70: CLTL/RoBERTa_HateXplain_Target_Span_Detection_UQS_Threshold_70_2<br><br>
 
 ## Description of folders:<br>
 1- HateXplain data modified + creation of batches: It contains codes on how the HateXplained data set was organized based on sorted target groups and then the target groups were evenly distributed across the data set. The way samples were selected and preprocessed has been explained in the paper.<br>
